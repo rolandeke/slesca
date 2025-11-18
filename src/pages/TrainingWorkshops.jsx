@@ -1,7 +1,8 @@
 import React from "react";
 
 import HeroSection from "../components/common/HeroSection";
-import TrainingAndWorkshopsComponent from "../components/services/TrainingWorkshops/TrainingAndWorkshopsComponent";
+// import TrainingAndWorkshopsComponent from "../components/services/TrainingWorkshops/TrainingAndWorkshopsComponent";
+import TrainingAndWorkshopNew from "../components/services/TrainingWorkshops/TrainingAndWorkshopNew";
 
 const TrainingWorkshops = () => {
   return (
@@ -9,10 +10,10 @@ const TrainingWorkshops = () => {
       <div className="bg-gradient-to-b from-blue-50 to-green-200 w-full h-full flex justify-center items-center flex-col">
         <HeroSection title="Training and Workshops" />
         <div
-          className=" w-full py-14 flex flex-col justify-center
-          items-center mt-5 mb-10"
+          className=" w-full flex flex-col justify-center
+          items-center"
         >
-          <TrainingAndWorkshopsComponent />
+          <TrainingAndWorkshopNew />
         </div>
       </div>
     </>

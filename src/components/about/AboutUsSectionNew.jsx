@@ -141,7 +141,7 @@ const AboutUsSection = () => {
               <div className="relative bg-white p-3 rounded-2xl shadow-2xl transform transition-transform group-hover:scale-105">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop"
+                    src="banner-images/img-6.jpeg"
                     alt="SLeSCA Agricultural Innovation"
                     className="w-full h-auto rounded-xl"
                   />

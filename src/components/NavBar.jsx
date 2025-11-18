@@ -267,7 +267,7 @@ const navigation = [
     subLinks: [
       { name: "Seeds Act", href: "/document/seeds-act" },
       { name: "Policies", href: "/document/policies" },
-      { name: "National Seed Catalogue", href: "/document/catalogue" },
+      // { name: "National Seed Catalogue", href: "/document/catalogue" },
     ],
   },
   { name: "Public Notices", href: "/public-notices", current: false },

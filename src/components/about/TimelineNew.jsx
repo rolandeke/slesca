@@ -25,10 +25,7 @@ const TimelineSection = () => {
           "Policy framework developed",
           "Infrastructure setup",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "Capacity Building",
@@ -38,10 +35,7 @@ const TimelineSection = () => {
           "5 regional workshops",
           "Quality standards set",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
     ],
     "2021-2022": [
@@ -54,10 +48,7 @@ const TimelineSection = () => {
           "National coverage achieved",
           "Lab facilities upgraded",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "Quality Assurance",
@@ -68,10 +59,7 @@ const TimelineSection = () => {
           "New testing protocols",
           "ECOWAS alignment started",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
     ],
     "2022-2023": [
@@ -83,10 +71,7 @@ const TimelineSection = () => {
           "Self-sufficiency achieved",
           "Import reduction",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "Strategic Partnerships",
@@ -96,10 +81,7 @@ const TimelineSection = () => {
           "Production capacity up 40%",
           "Quality partnerships",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "National Collaboration",
@@ -109,10 +91,7 @@ const TimelineSection = () => {
           "15 districts covered",
           "Unified standards",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "Variety Release",
@@ -123,10 +102,7 @@ const TimelineSection = () => {
           "Higher yields",
           "Climate-resistant seeds",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "Training Excellence",
@@ -136,10 +112,7 @@ const TimelineSection = () => {
           "95% certification rate",
           "Skills development",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
     ],
     "2023-2024": [
@@ -152,10 +125,7 @@ const TimelineSection = () => {
           "Real-time tracking",
           "Paperless processing",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
       {
         title: "International Recognition",
@@ -166,10 +136,7 @@ const TimelineSection = () => {
           "ISO standards met",
           "Global recognition",
         ],
-        images: [
-          "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=400&fit=crop",
-          "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop",
-        ],
+        images: ["/banner-images/img-6.jpeg", "/banner-images/img-7.jpeg"],
       },
     ],
   };

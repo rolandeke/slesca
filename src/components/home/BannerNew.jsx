@@ -11,10 +11,12 @@ import { Link } from "react-router-dom";
 
 // Sample images - replace with your actual images
 const bannerImages = [
-  "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800",
-  "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800",
-  "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=800",
-  "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800",
+  "/banner-images/img-2.jpeg",
+  "/banner-images/img-3.jpeg",
+  "/banner-images/img-5.jpeg",
+  "/banner-images/img-6.jpeg",
+  "/banner-images/img-7.jpeg",
+ 
 ];
 
 const stats = [
@@ -233,7 +235,7 @@ const Banner = () => {
                   <img
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-green-950/60 via-transparent to-transparent"></div>

@@ -315,9 +315,9 @@ const AchievementsAndImpact = () => {
             </div>
 
             <img
-              src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1200&h=600&fit=crop"
+              src="/banner-images/img-5.jpeg"
               alt="SLeSCA Agricultural Impact"
-              className="w-full h-64 md:h-80 lg:h-96 object-cover transform transition-transform duration-1000 group-hover:scale-110"
+              className="w-full h-64 md:h-80 lg:h-96 object-cover object-top transform transition-transform duration-1000 group-hover:scale-110"
             />
 
             {/* Overlay Content */}

@@ -13,6 +13,7 @@ import {
   Sparkles,
   Award,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -250,12 +251,15 @@ const RecentProjectsComponent = () => {
                 Be part of our mission to transform agriculture in Sierra Leone.
                 Together, we can achieve more.
               </p>
-              <button className="group px-8 py-4 bg-white text-green-700 font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <Link
+                to={"/contact-us"}
+                className="group/btn w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
                 <span className="flex items-center justify-center space-x-2">
                   <span>Get Involved</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -371,14 +375,14 @@ const RecentProjectsComponent = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <button className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                   Contact Us About This Project
                 </button>
                 <button className="flex-1 bg-gray-100 text-gray-700 font-bold py-4 px-6 rounded-xl hover:bg-gray-200 transition-all duration-300">
                   Share This Project
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

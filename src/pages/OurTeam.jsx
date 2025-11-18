@@ -5,6 +5,12 @@ import user from "../image/user.png";
 import mansaray from "../image/team/mansaray.jpeg";
 import francisWill from "../image/team/francis_will.jpeg";
 import robertChakanda from "../image/team/robert_chakanda.jpeg";
+import sahrAmara from "../image/team/shar_amara.jpeg";
+import mosesTumbah from "../image/team/moses_tumbah.jpeg";
+import kumbaKamara from "../image/team/kumba_kamara.jpeg";
+import janetSesay from "../image/team/janet_sesay.jpeg";
+import bernadetteTucker from "../image/team/bernadette_tucker.jpeg";
+import abdulKarimKargbo from "../image/team/abdul_karim_kargbo.jpeg";
 import TeamsComponent from "../components/team/TeamsComponent";
 
 const fieldStaffs = [
@@ -139,7 +145,7 @@ const managementTeam = [
   {
     name: "Dr. Janatu V. Sesay",
     role: "Senior Technical Head - Laboratories",
-    image: user,
+    image: janetSesay,
   },
   {
     name: "Ibrahim S. Mansaray",
@@ -149,7 +155,7 @@ const managementTeam = [
   {
     name: "Sahr Amara",
     role: "Admin/HR",
-    image: user,
+    image: sahrAmara,
   },
   {
     name: "Sia Jamie Hamore",
@@ -169,7 +175,7 @@ const managementTeam = [
   {
     name: "Abdul Karim Kargbo",
     role: "Seed-Business Adviser",
-    image: user,
+    image: abdulKarimKargbo,
   },
   {
     name: "Francis Will",
@@ -179,12 +185,12 @@ const managementTeam = [
   {
     name: "Kumba Sheku-Kamara",
     role: "Technical Crops/Projects Officer",
-    image: user,
+    image: kumbaKamara,
   },
   {
     name: "Moses Tumbe",
     role: "Public Relations Officer",
-    image: user,
+    image: mosesTumbah,
   },
   {
     name: "Adama J. Kamara",

@@ -148,7 +148,7 @@ const AboutNote = () => {
             <div className="relative group">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800"
+                  src="/banner-images/img-9.jpeg"
                   alt="SLeSCA Mission"
                   className="w-full h-[400px] lg:h-[500px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
