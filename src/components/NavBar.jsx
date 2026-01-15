@@ -341,7 +341,7 @@ function NavBar() {
   // Desktop submenu component
   const DesktopSubmenu = ({ subLinks }) => (
     <div
-      className="absolute left-0 mt-1 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible
+      className="absolute left-1 mt-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible
     transition-all duration-300 ease-in-out transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none
     group-hover:pointer-events-auto"
     >
@@ -352,7 +352,7 @@ function NavBar() {
               key={subItem.name}
               href={subItem.href}
               className={`
-                block px-4 py-3 text-sm font-medium transition-all duration-200
+                block px-4 py-3 text-sm font-medium transition-all duration-300
                 ${
                   activeNav === subItem.href
                     ? "bg-green-50 text-green-700 border-l-4 border-green-600"
@@ -409,10 +409,10 @@ function NavBar() {
         }`}
         aria-label="Main navigation"
       >
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 lg:h-20">
+        <div className="w-full px-6 sm:px-6 lg:px-6">
+          <div className="flex justify-around items-center h-16 lg:h-20">
             {/* Logo */}
-            <div className="flex items-center space-x-3 flex-shrink-0">
+            <div className="flex items-center space-x-5 flex-shrink-0">
               <a
                 href="/"
                 className="flex items-center space-x-2 group"
@@ -421,7 +421,7 @@ function NavBar() {
                 <img
                   src={logo}
                   alt="SLeSCA Logo"
-                  className="h-10 w-10 lg:h-12 lg:w-12 transition-transform duration-300 group-hover:scale-110"
+                  className="h-10 w-8 lg:h-12 lg:w-12 transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="flex flex-col">
                   <span className="text-white font-bold text-base lg:text-lg tracking-tight whitespace-nowrap">
@@ -435,15 +435,15 @@ function NavBar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden 2xl:flex items-center justify-center flex-1 px-8">
-              <div className="flex items-center space-x-2 xl:space-x-4">
+            <div className="hidden 2xl:flex items-center justify-center flex-1 px-12">
+              <div className="flex items-center space-x-2 xl:space-x-1">
                 {navigation.map((item) => (
                   <div key={item.name} className="relative group">
                     <a
                       href={item.href}
                       className={`
-                        px-3 xl:px-4 py-2 text-sm font-medium rounded-lg
-                        transition-all duration-200 flex items-center space-x-1 cursor-pointer whitespace-nowrap
+                        px-3 xl:px-4 py-2 text-sm font-normal rounded-lg
+                        transition-all duration-300 flex items-center space-x-1 cursor-pointer whitespace-nowrap
                         ${
                           activeNav === item.href
                             ? "text-white bg-green-800"
@@ -458,7 +458,7 @@ function NavBar() {
                       {item.subLinks && (
                         <ChevronDown
                           size={16}
-                          className="transition-transform duration-200 group-hover:rotate-180"
+                          className="transition-transform duration-300 group-hover:rotate-180"
                         />
                       )}
                     </a>

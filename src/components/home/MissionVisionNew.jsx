@@ -4,7 +4,7 @@ import {
   Eye,
   Sparkles,
   TrendingUp,
-  Users,
+  Users2 as Users,
   Leaf,
   ChevronLeft,
   ChevronRight,
@@ -25,28 +25,32 @@ const missionPoints = [
     icon: Target,
     text: "Ensure seed sufficiency",
     color: "from-green-400 to-emerald-500",
+    sectionTag:"home_mission"
   },
   {
     icon: TrendingUp,
     text: "Drive agricultural growth",
     color: "from-blue-400 to-cyan-500",
+    sectionTag:"home_mission"
   },
   {
     icon: Users,
     text: "Empower farmers & stakeholders",
-    color: "from-purple-400 to-pink-500",
+    color: "from-green-400 to-emerald-500",
+    sectionTag:"home_mission"
   },
   {
     icon: Leaf,
     text: "Build sustainable ecosystems",
     color: "from-orange-400 to-amber-500",
+    sectionTag:"home_mission"
   },
 ];
 
 const visionHighlights = [
-  { number: "100%", label: "Local Production", icon: Leaf },
-  { number: "5000+", label: "Farmers Empowered", icon: Users },
-  { number: "98%", label: "Quality Assurance", icon: Target },
+  { number: "100%", label: "Local Production", icon: Leaf, sectionTag:"home_vision_highlight" },
+  { number: "5000+", label: "Farmers Empowered", icon: Users, sectionTag:"home_vision_highlight" },
+  { number: "98%", label: "Quality Assurance", icon: Target, sectionTag:"home_vision_highlight" },
 ];
 
 const MissionVision = () => {
@@ -99,22 +103,22 @@ const MissionVision = () => {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-50 py-16 lg:py-24">
+    <div className="w-full bg-gradient-to-b from-gray-50 via-white to-gray-50 py-16 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-green-100 rounded-full px-4 py-2 mb-4">
-            <Sparkles className="w-5 h-5 text-green-600" />
+            <Sparkles className="w-4 h-4 text-green-600" />
             <span className="text-green-800 font-semibold text-sm">
               Our Purpose
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-4xl lg:text-4xl font-extrabold text-gray-900 mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-cyan-600">
               Mission & Vision
             </span>
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg md:text-lg max-w-lg mx-auto">
             Transforming Agriculture, Ensuring Food Security
           </p>
         </div>
@@ -126,10 +130,10 @@ const MissionVision = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-lg">
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
+                  <h3 className="text-2xl md:text-3xl lg:text-3xl font-extrabold text-gray-900">
                     OUR{" "}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-orange-500 to-green-700">
                       MISSION
@@ -139,7 +143,7 @@ const MissionVision = () => {
               </div>
 
               <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300">
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">
                   Our mission is to build a strong and sustainable seed sector
                   in Sierra Leone. By ensuring seed sufficiency, we aim to
                   contribute to food security and agricultural growth. SLeSCA is
@@ -165,9 +169,9 @@ const MissionVision = () => {
                           hoveredCard === index ? "scale-110" : ""
                         }`}
                       >
-                        <point.icon className="w-5 h-5 text-white" />
+                        <point.icon className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-gray-700 font-medium text-sm">
+                      <span className="text-gray-700 font-medium text-xs">
                         {point.text}
                       </span>
                     </div>
@@ -253,17 +257,17 @@ const MissionVision = () => {
                 {visionHighlights.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 text-center border border-green-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                    className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-4 text-center border border-green-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                   >
                     <div className="flex justify-center mb-3">
-                      <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                        <stat.icon className="w-6 h-6 text-white" />
+                      <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                        <stat.icon className="w-4 h-4 text-white" />
                       </div>
                     </div>
-                    <div className="text-3xl font-bold text-green-700 mb-1">
+                    <div className="text-sm font-bold text-green-700 mb-1">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-gray-600 font-medium">
+                    <div className="text-sm text-gray-600 font-normal">
                       {stat.label}
                     </div>
                   </div>
@@ -288,14 +292,14 @@ const MissionVision = () => {
                 <div className="relative z-10">
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="p-3 bg-white/20 backdrop-blur-sm rounded-2xl">
-                      <Eye className="w-8 h-8 text-white" />
+                      <Eye className="w-4 h-4 text-white" />
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-extrabold text-white">
+                    <h3 className="text-2xl md:text-2xl font-bold text-white">
                       A Sustainable Future
                     </h3>
                   </div>
 
-                  <p className="text-white/90 text-lg leading-relaxed mb-6">
+                  <p className="text-white/90 text-sm leading-relaxed mb-6">
                     Building a resilient agricultural sector that drives
                     economic growth, strengthens communities, and fosters a
                     self-sufficient nation.
@@ -310,7 +314,7 @@ const MissionVision = () => {
                     ].map((tag, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/30 hover:bg-white/30 transition-all duration-300"
+                        className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-bold border border-white/30 hover:bg-white/30 transition-all duration-300"
                       >
                         {tag}
                       </span>
@@ -328,10 +332,10 @@ const MissionVision = () => {
             <div className="order-1 lg:order-2 space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
-                  <Eye className="w-8 h-8 text-white" />
+                  <Eye className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
+                  <h3 className="text-2xl md:text-3xl lg:text-3xl font-extrabold text-gray-900">
                     OUR{" "}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-orange-500 to-green-700">
                       VISION
@@ -340,8 +344,8 @@ const MissionVision = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 hover:shadow-2xl transition-all duration-300">
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 hover:shadow-2xl transition-all duration-300">
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">
                   Our vision is to create a sustainable seed system in Sierra
                   Leone, reducing dependency on imported seeds and making the
                   seed sector attractive for private investment. We aim to
@@ -351,7 +355,7 @@ const MissionVision = () => {
 
                 <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-6"></div>
 
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   This vision goes beyond just seeds—it's about building a
                   resilient agricultural sector that drives economic growth,
                   strengthens communities, and fosters a self-sufficient nation.
@@ -365,13 +369,13 @@ const MissionVision = () => {
                 <h4 className="text-xl font-bold text-gray-900 mb-3">
                   Join Our Mission
                 </h4>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-5">
                   Be part of the transformation. Together, we're building a
                   sustainable future for Sierra Leone's agriculture.
                 </p>
                 <Link
                   to={"/about"}
-                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More About Our Work
                 </Link>

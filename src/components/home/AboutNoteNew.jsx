@@ -21,32 +21,52 @@ const AboutNote = () => {
       title: "Quality Regulation",
       description: "Enforcing the highest standards in seed quality",
       color: "from-green-500 to-emerald-600",
+      sectionTag: "home_about_highlights",
     },
     {
       icon: FileCheck,
       title: "Licensing & Compliance",
       description: "Certifying seed operators across Sierra Leone",
       color: "from-blue-500 to-cyan-600",
+      sectionTag: "home_about_highlights",
     },
     {
       icon: Users,
       title: "Farmer Support",
       description: "Empowering farmers with quality seeds",
       color: "from-purple-500 to-pink-600",
+      sectionTag: "home_about_highlights",
     },
     {
       icon: TrendingUp,
       title: "Food Security",
       description: "Contributing to national agricultural growth",
       color: "from-orange-500 to-amber-600",
+      sectionTag: "home_about_highlights",
     },
   ];
 
   const achievements = [
-    { label: "Licensed Operators", value: "500+" },
-    { label: "Certified Seeds", value: "10K+ tons" },
-    { label: "Farmers Reached", value: "50K+" },
-    { label: "Success Rate", value: "98%" },
+    {
+      label: "Licensed Operators",
+      value: "500+",
+      sectionTag: "home_about_achievements",
+    },
+    {
+      label: "Certified Seeds",
+      value: "10K+ tons",
+      sectionTag: "home_about_achievements",
+    },
+    {
+      label: "Farmers Reached",
+      value: "50K+",
+      sectionTag: "home_about_achievements",
+    },
+    {
+      label: "Success Rate",
+      value: "98%",
+      sectionTag: "home_about_achievements",
+    },
   ];
 
   const keyPoints = [
@@ -57,7 +77,7 @@ const AboutNote = () => {
   ];
 
   return (
-    <div className="w-full bg-gradient-to-b from-white via-green-50 to-white py-16 lg:py-24">
+    <div className="w-full bg-gradient-to-b from-white via-green-50 to-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -73,7 +93,7 @@ const AboutNote = () => {
 
             {/* Heading */}
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4">
+              <h2 className="text-4xl md:text-4xl lg:text-4xl font-extrabold text-gray-900 mb-4">
                 About{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-500 to-cyan-600">
                   SLeSCA
@@ -84,7 +104,7 @@ const AboutNote = () => {
 
             {/* Description */}
             <div className="space-y-4">
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-sm leading-relaxed">
                 The{" "}
                 <span className="font-bold text-green-700">
                   Sierra Leone Seed Certification Agency (SLeSCA)
@@ -92,7 +112,7 @@ const AboutNote = () => {
                 , established under the 2018 Seed Act, is the national authority
                 for seed quality regulation in Sierra Leone.
               </p>
-              <p className="text-gray-600 text-base leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 By licensing seed operators, enforcing compliance, and
                 certifying seed quality, we support sustainable agriculture and
                 national food security. Our commitment extends beyond regulation
@@ -121,7 +141,7 @@ const AboutNote = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to={"/about"}
-                className="group relative px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl font-bold text-white shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="group relative px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl font-medium text-white shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center justify-center space-x-2">
                   <span>Learn More About Us</span>
@@ -132,7 +152,7 @@ const AboutNote = () => {
 
               <Link
                 to={"/license-procedures"}
-                className="group px-8 py-4 bg-white border-2 border-green-600 rounded-xl font-bold text-green-600 hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
+                className="group px-8 py-3 bg-white border-2 border-green-600 rounded-xl font-medium text-green-600 hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
               >
                 <span className="flex items-center justify-center space-x-2">
                   <Leaf className="w-5 h-5" />
@@ -159,10 +179,10 @@ const AboutNote = () => {
                   <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
                     <div className="flex items-center space-x-3">
                       <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                        <Shield className="w-6 h-6 text-white" />
+                        <Shield className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-gray-900">
+                        <div className="text-1xl font-bold text-gray-900">
                           Since 2018
                         </div>
                         <div className="text-sm text-gray-600">
@@ -195,9 +215,9 @@ const AboutNote = () => {
                       hoveredFeature === index ? "scale-110 rotate-3" : ""
                     }`}
                   >
-                    <feature.icon className="w-6 h-6 text-white" />
+                    <feature.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">
+                  <h4 className="font-bold text-gray-900 text-xs mb-1">
                     {feature.title}
                   </h4>
                   <p className="text-gray-600 text-xs">{feature.description}</p>
@@ -208,11 +228,11 @@ const AboutNote = () => {
         </div>
 
         {/* Achievements Bar */}
-        <div className="mt-16 bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 rounded-3xl p-8 shadow-2xl">
+        <div className="mt-16 bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 rounded-3xl p-6 shadow-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center group cursor-pointer">
-                <div className="text-4xl md:text-5xl font-extrabold text-white mb-2 group-hover:scale-110 transition-transform">
+                <div className="text-3xl md:text-3xl font-bold text-white mb-2 group-hover:scale-110 transition-transform">
                   {achievement.value}
                 </div>
                 <div className="text-green-100 font-medium text-sm">
@@ -228,10 +248,10 @@ const AboutNote = () => {
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
             <div className="flex items-start space-x-4">
               <div className="p-3 bg-green-600 rounded-xl">
-                <Award className="w-6 h-6 text-white" />
+                <Award className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
                   Quality Standards
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -245,10 +265,10 @@ const AboutNote = () => {
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
             <div className="flex items-start space-x-4">
               <div className="p-3 bg-blue-600 rounded-xl">
-                <Users className="w-6 h-6 text-white" />
+                <Users className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
                   Farmer Training
                 </h4>
                 <p className="text-gray-600 text-sm">
@@ -262,10 +282,10 @@ const AboutNote = () => {
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
             <div className="flex items-start space-x-4">
               <div className="p-3 bg-purple-600 rounded-xl">
-                <TrendingUp className="w-6 h-6 text-white" />
+                <TrendingUp className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 text-lg mb-2">
+                <h4 className="font-bold text-gray-900 text-sm mb-2">
                   Economic Growth
                 </h4>
                 <p className="text-gray-600 text-sm">

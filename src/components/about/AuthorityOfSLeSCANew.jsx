@@ -101,7 +101,7 @@ const AuthorityOfSLeSCA = () => {
           </div>
 
           {/* Main Title */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h2 className="text-4xl  font-bold mb-4">
             <span className="bg-gradient-to-r from-emerald-700 via-teal-600 to-green-700 bg-clip-text text-transparent">
               Authority of the Agency
             </span>
@@ -158,24 +158,24 @@ const AuthorityOfSLeSCA = () => {
                     <div
                       className={`relative ${
                         card.iconBg
-                      } w-20 h-20 rounded-2xl flex items-center justify-center transform transition-all duration-500 ${
+                      } w-10 h-10 rounded-2xl flex items-center justify-center transform transition-all duration-500 ${
                         activeCard === card.id ? "rotate-12 scale-110" : ""
                       } shadow-xl`}
                     >
                       <card.icon
-                        className="w-10 h-10 text-white"
+                        className="w-5 h-5 text-white"
                         strokeWidth={2}
                       />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">
+                  <h4 className="text-lg font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">
                     {card.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
                     {card.description}
                   </p>
 

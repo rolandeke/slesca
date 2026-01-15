@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/slescagov/public_html/
+    - /bin/npm install
+    - /bin/npm run build
+    - /bin/rsync -a --delete build/ $DEPLOYPATH

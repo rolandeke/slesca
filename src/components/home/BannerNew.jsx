@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import {
   ChevronRight,
   Leaf,
@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { apiClient } from "../../lib/api";
 
 // Sample images - replace with your actual images
 const bannerImages = [
@@ -16,7 +17,6 @@ const bannerImages = [
   "/banner-images/img-5.jpeg",
   "/banner-images/img-6.jpeg",
   "/banner-images/img-7.jpeg",
- 
 ];
 
 const stats = [
@@ -58,6 +58,8 @@ const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [statsData, setStatsData] = useState([]);
+  const [highlightsData, setHighlightsData] = useState([]);
 
   // Auto-play carousel
   useEffect(() => {
@@ -81,8 +83,18 @@ const Banner = () => {
     setCurrentSlide(index);
   };
 
+  // useMemo(async () => {
+  //   const response = await apiClient.get("/home_page?select=*");
+  //   const filteredData = response.data[0].stats.filter(
+  //     (item) =>
+  //       item.sectionTag === "home_banner" ||
+  //       item.sectionTag === "home_banner_highlights"
+  //   );
+  //   // console.log(filteredData);
+  // }, []);
+
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-br from-green-950 via-green-900 to-green-950 overflow-hidden pt-16 lg:pt-20">
+    <div className="relative w-full min-h-screen bg-gradient-to-br from-green-950 via-green-900 to-green-950 overflow-hidden pt-16 lg:pt-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating orbs */}
@@ -96,9 +108,31 @@ const Banner = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Left Content - Text Section */}
           <div className="space-y-8" onMouseMove={handleMouseMove}>
+            {/* Main Heading */}
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-3xl lg:text-3xl font-extrabold leading-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-green-100 to-blue-200 animate-gradient">
+                  Welcome to {" "}
+                </span>
+                {/* <br /> */}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-300 to-cyan-400">
+                  Sierra Leone {" "}
+                </span>
+                {/* <br /> */}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-green-400">
+                  Seed Certification {" "}
+                </span>
+                {/* <br /> */}
+                <span className="text-white text-3xl md:text-3xl">Agency {" "}</span>
+                <span className="text-green-400 text-3xl md:text-3xl">
+                  {" "}
+                  (SLeSCA)
+                </span>
+              </h1>
+            </div>
             {/* Badge */}
             <div
               className="inline-flex items-center space-x-2 bg-green-800/50 backdrop-blur-sm border border-green-600/30 rounded-full px-4 py-2 transform hover:scale-105 transition-all duration-300"
@@ -109,37 +143,14 @@ const Banner = () => {
               }}
             >
               <Leaf className="w-4 h-4 text-green-400 animate-pulse" />
-              <span className="text-green-300 text-sm font-medium">
+              <span className="text-green-300 text-sm font-normal">
                 Agricultural Excellence
               </span>
             </div>
 
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-green-100 to-blue-200 animate-gradient">
-                  Welcome to
-                </span>
-                <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-emerald-300 to-cyan-400">
-                  Sierra Leone
-                </span>
-                <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-green-400">
-                  Seed Certification
-                </span>
-                <br />
-                <span className="text-white text-4xl md:text-5xl">Agency</span>
-                <span className="text-green-400 text-4xl md:text-5xl">
-                  {" "}
-                  (SLeSCA)
-                </span>
-              </h1>
-            </div>
-
             {/* Description */}
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-xl">
-              Ensuring high-quality seeds and fostering sustainable growth for
+              SLeSCA is ensuring high-quality seeds and fostering sustainable growth for
               Sierra Leone's
               <span className="text-green-400 font-semibold">
                 {" "}
@@ -148,35 +159,35 @@ const Banner = () => {
               and
               <span className="text-blue-400 font-semibold">
                 {" "}
-                agricultural development
+                agricultural development .
               </span>
-              .
+            
             </p>
 
             {/* Highlights */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2">
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                  className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-3 py-2 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 >
                   <div className="flex items-center space-x-3">
                     <div
                       className={`p-2 rounded-lg bg-gradient-to-br ${item.color}`}
                     >
-                      <item.icon className="w-5 h-5 text-white" />
+                      <item.icon className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-white font-medium">{item.text}</span>
+                    <span className="text-white font-normal">{item.text}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 pt-3">
               <Link
                 to={"/about"}
-                className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl font-bold text-white shadow-lg shadow-green-500/50 hover:shadow-xl hover:shadow-green-500/70 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="group relative px-4 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl text-white font-normal shadow-lg shadow-green-500/50 hover:shadow-xl hover:shadow-green-500/70 transform hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center justify-center space-x-2">
                   <span>More About Us</span>
@@ -187,7 +198,7 @@ const Banner = () => {
 
               <Link
                 to={"license-procedures"}
-                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl font-bold text-white hover:bg-white/20 transform hover:scale-105 transition-all duration-300"
+                className="group px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-xl font-normal text-white hover:bg-white/20 transform hover:scale-105 transition-all duration-300"
               >
                 <span className="flex items-center justify-center space-x-2">
                   <span>Get Certified</span>

@@ -2,15 +2,6 @@ import React from "react";
 import HeroSection from "../components/common/HeroSection";
 import BoardOfDirectors from "../components/team/BoardOfDirectors";
 import user from "../image/user.png";
-import mansaray from "../image/team/mansaray.jpeg";
-import francisWill from "../image/team/francis_will.jpeg";
-import robertChakanda from "../image/team/robert_chakanda.jpeg";
-import sahrAmara from "../image/team/shar_amara.jpeg";
-import mosesTumbah from "../image/team/moses_tumbah.jpeg";
-import kumbaKamara from "../image/team/kumba_kamara.jpeg";
-import janetSesay from "../image/team/janet_sesay.jpeg";
-import bernadetteTucker from "../image/team/bernadette_tucker.jpeg";
-import abdulKarimKargbo from "../image/team/abdul_karim_kargbo.jpeg";
 import TeamsComponent from "../components/team/TeamsComponent";
 
 const fieldStaffs = [
@@ -68,7 +59,8 @@ const fieldStaffs = [
   {
     name: "Abu Bakarr Kamara",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/abubakarr-kamara.jpeg",
   },
   {
     name: "Alpha Kamara",
@@ -93,7 +85,8 @@ const fieldStaffs = [
   {
     name: "Alfred Kamara",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/alfred-kerifa-kamara.jpeg",
   },
   {
     name: "Yayah Daramy",
@@ -103,12 +96,14 @@ const fieldStaffs = [
   {
     name: "Abu Bakarr Gibril",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/abu-bakarr-gibrill.jpeg",
   },
   {
     name: "Hassan Kamara (Kassiri)",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/hassan-kamara.jpeg",
   },
 ];
 
@@ -129,7 +124,8 @@ const managementTeam = [
   {
     name: "Robert Chakanda (PhD)",
     role: "Executive Director",
-    image: robertChakanda,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/robert_chakanda.jpeg",
     bio: "Professional expertise in Seed Systems in Africa, Commercial Seed Production and Seed-Related Agro-businesses; Training and Capacity building, Micro-financing; Market access and Opportunities for farmers.",
     expertise: ["Seed Specialist"],
     education: "Phd in Biosystematics, Taxonomy and Plant Genetic Resources",
@@ -145,17 +141,20 @@ const managementTeam = [
   {
     name: "Dr. Janatu V. Sesay",
     role: "Senior Technical Head - Laboratories",
-    image: janetSesay,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/janet_sesay.jpeg",
   },
   {
     name: "Ibrahim S. Mansaray",
     role: "Head of Secretariat",
-    image: mansaray,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/mansaray.jpeg",
   },
   {
     name: "Sahr Amara",
     role: "Admin/HR",
-    image: sahrAmara,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/shar_amara.jpeg",
   },
   {
     name: "Sia Jamie Hamore",
@@ -175,22 +174,26 @@ const managementTeam = [
   {
     name: "Abdul Karim Kargbo",
     role: "Seed-Business Adviser",
-    image: abdulKarimKargbo,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/abdul_karim_kargbo.jpeg",
   },
   {
     name: "Francis Will",
     role: "Innovation Officer",
-    image: francisWill,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/francis_will.jpeg",
   },
   {
     name: "Kumba Sheku-Kamara",
     role: "Technical Crops/Projects Officer",
-    image: kumbaKamara,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/kumba_kamara.jpeg",
   },
   {
     name: "Moses Tumbe",
     role: "Public Relations Officer",
-    image: mosesTumbah,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/moses_tumbah.jpeg",
   },
   {
     name: "Adama J. Kamara",
@@ -200,7 +203,8 @@ const managementTeam = [
   {
     name: "Salia Jeigula",
     role: "Logistics Officer",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/salia-jeigula.jpeg",
   },
   {
     name: "Stephine E.K Williams",
@@ -233,7 +237,8 @@ const mile91LabTeam = [
   {
     name: "Thomas Tucker",
     role: "Field Technician",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/thomas-tucker.jpeg",
   },
   {
     name: "Abdul Deen Kamara",
@@ -273,12 +278,14 @@ const mile91LabTeam = [
   {
     name: "Mohamed Williams",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/mohamed-williams.jpeg",
   },
   {
     name: "Momodu Dumere",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/momodu-dumereh.jpeg",
   },
   {
     name: "Moriba Musa Koroma",
@@ -296,9 +303,10 @@ const mile91LabTeam = [
     image: user,
   },
   {
-    name: "Sahr Gbetuwa",
+    name: "Patrick Sahr Gbetuwa",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/patrick-sahr-gbetuwa.jpeg",
   },
   {
     name: "Abraham Konda Sesay",
@@ -308,12 +316,14 @@ const mile91LabTeam = [
   {
     name: "Sorie Kamara Conteh",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/sorie-kamara-conteh.jpeg",
   },
   {
     name: "Alfred Kamara",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/alfred-kerifa-kamara.jpeg",
   },
   {
     name: "Yayah Daramy",
@@ -328,7 +338,8 @@ const mile91LabTeam = [
   {
     name: "Hassan Kamara (Kassiri)",
     role: "Field Inspector",
-    image: user,
+    image:
+      "https://ducwgnvnuymdiuacweto.supabase.co/storage/v1/object/public/media/team/hassan-kamara.jpeg",
   },
   {
     name: "Umaru K. Kamara",

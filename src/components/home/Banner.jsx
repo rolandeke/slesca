@@ -100,7 +100,7 @@ const Banner = () => {
               /> */}
             </div>
             <div className="relative z-10 text-start lg:ml-[8rem] sm:ml-[3rem] mt-10">
-              <h1 className="lg:text-5xl text-4xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-blue-600 font-sans font-bold">
+              <h1 className="lg:text-2xl text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-blue-600 font-sans font-bold">
               Welcome <br /> to Sierra Leone <br /> Seed Certification Agency (SLeSCA)
               </h1>
               <p></p>

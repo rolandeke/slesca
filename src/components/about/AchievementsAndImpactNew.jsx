@@ -139,7 +139,7 @@ const AchievementsAndImpact = () => {
           </div>
 
           {/* Main Title with Green Gradient */}
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+          <h2 className="text-4xl font-black mb-6">
             <span className="bg-gradient-to-r from-green-700 via-emerald-600 to-teal-700 bg-clip-text text-transparent">
               Our Achievements
             </span>
@@ -153,7 +153,7 @@ const AchievementsAndImpact = () => {
           </div>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg  text-gray-700 max-w-3xl mx-auto leading-relaxed">
             SLeSCA's accomplishments reflect our{" "}
             <span className="font-bold text-green-700">
               unwavering commitment

@@ -77,7 +77,7 @@ const AboutUsSection = () => {
               Established Under 2018 Seed Act
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-600 to-green-700 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-emerald-700 via-teal-600 to-green-700 bg-clip-text text-transparent mb-4">
             About Us
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 mx-auto rounded-full"></div>
@@ -150,10 +150,10 @@ const AboutUsSection = () => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 transform transition-transform hover:scale-110">
+              <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl p-6 transform transition-transform hover:scale-110">
                 <div className="text-center">
-                  <Leaf className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-gray-800">2018</p>
+                  <Leaf className="w-5 h-5 text-emerald-600 mx-auto mb-2" />
+                  <p className="text-1xl font-bold text-gray-800">2018</p>
                   <p className="text-xs text-gray-600">Est. Year</p>
                 </div>
               </div>
@@ -176,7 +176,7 @@ const AboutUsSection = () => {
               ></div>
 
               {/* Card Content */}
-              <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 {/* Icon */}
                 <div
                   className={`${
@@ -185,18 +185,18 @@ const AboutUsSection = () => {
                     hoveredCard === stat.id ? "scale-110 rotate-6" : ""
                   }`}
                 >
-                  <stat.icon className={`w-8 h-8 ${stat.iconColor}`} />
+                  <stat.icon className={`w-5 h-5 ${stat.iconColor}`} />
                 </div>
 
                 {/* Number */}
                 <h4
-                  className={`text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-3`}
+                  className={`text-3xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-3`}
                 >
                   {stat.number}
                 </h4>
 
                 {/* Title */}
-                <h5 className="text-xl font-semibold text-gray-800 mb-3">
+                <h5 className="text-lg font-semibold text-gray-800 mb-3">
                   {stat.title}
                 </h5>
 
